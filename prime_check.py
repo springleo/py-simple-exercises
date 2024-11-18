@@ -2,7 +2,8 @@
 def is_prime(n):
     if n<=1:
         return False
-    for i in range(2,int(n**0.5)+1): # Check divisors up to square root of the number
+    # for i in range(2,int(n**0.5)+1): # Check divisors up to square root of the number
+    for i in range(2,n-1): # this logic apparently takes longer - an overkill
         if n%i==0: # If divisible, it's not a prime number
             return False
     return True
